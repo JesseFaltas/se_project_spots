@@ -1,4 +1,25 @@
 .page {
   background-color: #fcf5e5;
   font-family: Poppins, Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+.page__logo-container {
+  display: flex;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.page__logo {
+  max-width: 94px;
+  max-height: 26px;
+  display: flex;
+}
+
+@media screen and (max-width: 627px) {
+  .page {
+  }
 }

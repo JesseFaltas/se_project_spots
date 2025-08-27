@@ -1,0 +1,60 @@
+.card {
+  width: 413px;
+}
+
+.card__title {
+  font: poppins, Arial, helvetica, sans-serif;
+  font-weight: 500;
+  font-style: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+
+.card__image {
+  height: 413px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.card__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__like-btn {
+  background-image: url(../images/spots-images/heart.svg);
+  width: 23px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  opacity: 40%;
+}
+
+@media screen and (max-width: 627px) {
+  .card {
+    max-width: 627px;
+  }
+
+  .card__title {
+    font-size: 16px;
+    line-height: 100%;
+    margin: 12px 0 2px;
+  }
+
+  .card__image {
+    width: 288px;
+    height: 288px;
+  }
+
+  .card__content {
+    margin-right: 173px;
+  }
+
+  .card__title {
+    white-space: nowrap;
+  }
+}

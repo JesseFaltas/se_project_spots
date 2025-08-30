@@ -1,10 +1,10 @@
-# Spots
+# PROJECT NAME
 
-A social media app dedicated to image sharing
+This project is called se_project_spots or simply known as spots
 
 ## Description
 
-make a description
+A social media app dedicated to image sharing and ease of use
 
 ## Tech Stack
 

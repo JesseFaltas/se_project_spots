@@ -10,10 +10,10 @@
   grid-template-columns: repeat(auto-fit, 413px);
   gap: 40px 20px;
   justify-content: center;
-  /*DONT FORGET TO ADJUST MARGINS TO BE ACCURATE */
   max-width: 1280px;
   margin: 0 auto;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
+  padding-bottom: 20px;
 }
 
 @media screen and (max-width: 627px) {

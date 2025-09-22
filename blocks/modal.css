@@ -13,7 +13,7 @@
 
 /*DONT FORGET TO ADD MAX-HEIGHT AND ADD HEIGHT 100%*/
 
-.modal_is-opened {
+.modal__is-opened {
   visibility: visible;
 }
 

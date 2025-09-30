@@ -18,7 +18,7 @@
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
-  transition: visibile 0.5s, opacity 0.5s linear;
+  transition: visibility 0.5s, opacity 0.5s linear;
 }
 
 .modal__container {
@@ -29,6 +29,7 @@
   border-radius: 8px;
   background-color: #fff;
   position: relative;
+  padding: 36px 50px 32px 50px;
 }
 
 .modal__close-btn {
@@ -39,6 +40,11 @@
   height: 40px;
   background: none;
   border: none;
+  cursor: pointer;
+}
+
+.modal__close-btn:hover {
+  opacity: 70%;
 }
 
 .modal__title {

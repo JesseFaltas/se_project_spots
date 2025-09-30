@@ -20,11 +20,11 @@
   align-self: self-end;
   white-space: nowrap;
   gap: 8px;
+  cursor: pointer;
 }
 
 .profile__add-btn:hover {
-  opacity: 40%;
-  cursor: pointer;
+  opacity: 80%;
 }
 
 .profile__add-btn-text {

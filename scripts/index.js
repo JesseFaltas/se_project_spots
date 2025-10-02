@@ -33,7 +33,7 @@ editProfileCloseBtn.addEventListener("click", () => {
 
 editProfileModal.addEventListener("click", (e) => {
   if (e.target === editProfileModal) {
-    editProfileModal.classList.remove("modal__is-opened");
+    closeModal(editProfileModal);
   }
 });
 
@@ -55,19 +55,19 @@ const newPostImageInput = newPostModal.querySelector("#card-image-input");
 const newPostCaptionInput = newPostModal.querySelector("#card-caption-input");
 
 newPostButton.addEventListener("click", function () {
-  newPostModal.classList.add("modal__is-opened");
+  openModal(newPostModal);
 });
 
 newPostCloseBtn.addEventListener("click", function () {
-  newPostModal.classList.remove("modal__is-opened");
+  closeModal(newPostModal);
 });
 
 function handleNewPostFormSubmit(evt) {
   evt.preventDefault();
-  console.log("newPostImageInput.value");
+  console.log(newPostImageInput.value);
   console.log(newPostCaptionInput.value);
   newPostForm.reset();
-  newPostModal.classList.remove("modal__is-opened");
+  closeModal(newPostModal);
 }
 
 newPostForm.addEventListener("submit", handleNewPostFormSubmit);

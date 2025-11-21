@@ -12,6 +12,7 @@ A social media app dedicated to image sharing and ease of use
 -CSS
 -Reponsive design
 -display grid/flex
+-javascript
 
 ## Deployment
 

@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head title="metadata">
+<head>
   <meta charset="UTF-8" />
-  <!--REMEMBER TO CHANGE ALL THIS FOR SEARCH ENGINE OPTIMIZATION-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="???" />
   <meta name="Jesse Faltas" content="???" />
@@ -16,8 +15,10 @@
 
 <body>
   <div class="page">
-    <div class="header">
-      <img src="./images/spots-images/Logo.svg" alt="Logo" class="page__logo" />
+    <div>
+      <header class="header">
+        <img src="./images/spots-images/Logo.svg" alt="Logo" class="page__logo" />
+      </header>
     </div>
 
     <main class="content">
@@ -42,7 +43,7 @@
         <ul class="cards__list">
           <template id="card-template">
             <li class="card">
-              <button type="button" class="card__delete-btn" type="button"></button>
+              <button type="button" class="card__delete-btn"></button>
               <img src="#" alt="" class="card__image" />
               <div class="card__content">
                 <h2 class="card__title"></h2>
@@ -131,7 +132,7 @@
 
   <div class="modal" id="preview-modal">
     <div class="modal__image-container">
-      <button type="button" class="modal__close-btn modal__close_type_preview">
+      <button type="button" class="modal__close-btn modal__close-btn_type_preview">
         <img src="./images/spots-images/pop_up-close-btn.svg" alt="x-icon"></button>
       <img src="#" alt="" class="modal-image" />
       <p class="modal__caption"></p>

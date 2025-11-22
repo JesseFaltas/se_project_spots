@@ -5,14 +5,6 @@
   color: #212121;
 }
 
-.header {
-  display: flex;
-  width: 100%;
-  background-color: #ffffff;
-  justify-content: center;
-  align-items: center;
-}
-
 .page__logo {
   max-width: 94px;
   max-height: 26px;

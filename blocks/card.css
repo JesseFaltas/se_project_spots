@@ -42,7 +42,7 @@
   height: 20px;
   border: none;
   background-color: transparent;
-  opacity: 40%;
+  opacity: 0.4;
   cursor: pointer;
 }
 
@@ -50,7 +50,7 @@
   opacity: 1;
 }
 
-.card__like-btn_:focus {
+.card__like-btn:focus {
   outline: 2px solid #007bff;
   outline-offset: 2px;
 }
@@ -82,11 +82,13 @@
 
 .card__delete-btn:hover {
   background-image: url(../images/spots-images/hover_delete-btn.svg);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
   .card {
     max-width: 288px;
+    width: 100%;
   }
 
   .card__title {

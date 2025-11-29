@@ -58,6 +58,7 @@
 .card__like-btn_active {
   background-image: url(../images/spots-images/like_button-liked.svg);
   opacity: 1;
+  background-repeat: no-repeat;
 }
 
 .card__like-btn_active:hover {

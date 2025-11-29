@@ -115,7 +115,7 @@ const cardList = document.querySelector(".cards__list");
 //modal preview elements
 const previewModal = document.querySelector("#preview-modal");
 const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
-const previewImageEl = previewModal.querySelector(".modal-image");
+const previewImageEl = previewModal.querySelector(".modal__image");
 const previewCaption = previewModal.querySelector(".modal__caption");
 
 function getCardElement(data) {

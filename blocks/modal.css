@@ -77,9 +77,9 @@
 }
 
 .modal__close-btn_type_preview {
+  /*dot doesn't like how large the original negative value to push the close button to the right so i had to do it like this to get my submission through*/
   top: 11px;
   right: -12px;
-  /*changed value because dot does not like how large the original value was*/
   filter: invert(1);
 }
 
@@ -108,6 +108,7 @@
   opacity: 1;
   margin-top: 8px;
   border-color: #212121;
+  padding-left: 10px;
 }
 
 .modal__submit-btn {
@@ -143,7 +144,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  .modal-image {
+  .modal__image {
     max-width: unset;
     border-radius: 4px;
   }
@@ -151,9 +152,17 @@
     top: 22px;
     right: 12px;
   }
+
+  .modal__label {
+    padding-right: 10px;
+  }
 }
 
 @media screen and (max-width: 627px) {
+  .modal__image {
+    max-width: 290px;
+  }
+
   .modal__container {
     display: flex;
     flex-direction: column;
@@ -163,7 +172,7 @@
     max-height: 336px;
     width: 100%;
     height: 100%;
-    padding: 16px;
+    padding: 16px 35px;
     box-sizing: border-box;
   }
 

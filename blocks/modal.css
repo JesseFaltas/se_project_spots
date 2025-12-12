@@ -77,9 +77,8 @@
 }
 
 .modal__close-btn_type_preview {
-  /*dot doesn't like how large the original negative value to push the close button to the right so i had to do it like this to get my submission through*/
   top: 11px;
-  right: -12px;
+  right: -40px;
   filter: invert(1);
 }
 
@@ -98,16 +97,26 @@
   gap: 32px;
 }
 
+.modal__label {
+  font-family: poppins, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: 0;
+  opacity: 70%;
+  border-radius: 8px;
+}
+
 .modal__input {
+  box-sizing: border-box;
   display: block;
   max-width: 630px;
   width: 100%;
   height: 52px;
   border-radius: 8px;
-  border-width: 1px;
+  border: 1px solid #212121;
   opacity: 1;
   margin-top: 8px;
-  border-color: #212121;
   padding-left: 10px;
 }
 
@@ -152,10 +161,6 @@
     top: 22px;
     right: 12px;
   }
-
-  .modal__label {
-    padding-right: 10px;
-  }
 }
 
 @media screen and (max-width: 627px) {
@@ -172,7 +177,7 @@
     max-height: 336px;
     width: 100%;
     height: 100%;
-    padding: 16px 35px;
+    padding: 16px 12px;
     box-sizing: border-box;
   }
 
@@ -191,7 +196,8 @@
   .modal__close-btn {
     top: 16px;
     right: 16px;
-    margin: -7px 0 0 0;
+    top: 10px;
+    right: 5px;
   }
 
   .modal__form {
@@ -202,7 +208,6 @@
     display: flex;
     max-width: 276px;
     width: 100%;
-    margin-top: -12px;
   }
 
   .modal__close-btn_type_preview {

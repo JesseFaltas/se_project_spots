@@ -45,12 +45,23 @@ const editProfileDescriptionInput = editProfileModal.querySelector(
   "#profile-description-input",
 );
 
+function handleEscape(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_is-opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscape);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscape);
 }
 
 editProfileButton.addEventListener("click", () => {
@@ -59,14 +70,19 @@ editProfileButton.addEventListener("click", () => {
   openModal(editProfileModal);
 });
 
-editProfileCloseBtn.addEventListener("click", () => {
-  closeModal(editProfileModal);
-});
+// all in one function for closing modals
+const modals = document.querySelectorAll(".modal");
+modals.forEach((modal) => {
+  const closeBtn = modal.querySelector(".modal__close-btn");
 
-editProfileModal.addEventListener("click", (e) => {
-  if (e.target === editProfileModal) {
-    closeModal(editProfileModal);
-  }
+  closeBtn.addEventListener("click", () => {
+    closeModal(modal);
+  });
+  modal.addEventListener("click", (evt) => {
+    if (evt.target === modal) {
+      closeModal(modal);
+    }
+  });
 });
 
 function handleEditProfileFormSubmit(evt) {
@@ -91,10 +107,6 @@ newPostButton.addEventListener("click", function () {
   openModal(newPostModal);
 });
 
-newPostCloseBtn.addEventListener("click", function () {
-  closeModal(newPostModal);
-});
-
 function handleNewPostFormSubmit(evt) {
   evt.preventDefault();
 
@@ -104,7 +116,6 @@ function handleNewPostFormSubmit(evt) {
   };
   const cardElement = getCardElement(inputValues);
   cardList.prepend(cardElement);
-  newPostForm.reset();
   evt.target.reset();
   disableButton(cardSubmitBtn, settings);
   closeModal(newPostModal);
@@ -152,9 +163,6 @@ function getCardElement(data) {
 
   return cardElement;
 }
-previewModalCloseBtn.addEventListener("click", () => {
-  closeModal(previewModal);
-});
 
 initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);

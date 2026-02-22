@@ -22,9 +22,9 @@ const hideInputError = (formEl, inputEl, config) => {
 const checkInputValidity = (formEl, inputEl, config) => {
   console.log(inputEl.validationMessage);
   if (!inputEl.validity.valid) {
-    showInputError(formEl, inputEl, inputEl.validationMessage);
+    showInputError(formEl, inputEl, inputEl.validationMessage, config);
   } else {
-    hideInputError(formEl, inputEl);
+    hideInputError(formEl, inputEl, config);
   }
 };
 
@@ -50,9 +50,9 @@ const disableButton = (buttonEl, config) => {
 };
 
 //optional
-const resetValidation = (formEl, inputlist) => {
+const resetValidation = (formEl, inputList, config) => {
   inputList.forEach((input) => {
-    hideInputError(formEl, input);
+    hideInputError(formEl, input, config);
   });
 };
 
@@ -67,7 +67,7 @@ const setEventListeners = (formEl, config) => {
 
   inputList.forEach((inputElement) => {
     inputElement.addEventListener("input", function () {
-      checkInputValidity(formEl, inputElement);
+      checkInputValidity(formEl, inputElement, config);
       toggleButtonState(inputList, buttonElement, config);
     });
   });

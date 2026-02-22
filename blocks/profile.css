@@ -24,7 +24,7 @@
 }
 
 .profile__add-btn:hover {
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .profile__add-btn-text {
@@ -81,11 +81,6 @@
 .profile__edit-btn-text {
   max-width: 84px;
   max-height: 16px;
-}
-
-.page__section {
-  max-width: 1280px;
-  margin: 0 auto;
 }
 
 @media screen and (max-width: 627px) {

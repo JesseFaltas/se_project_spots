@@ -50,10 +50,20 @@ const disableButton = (buttonEl, config) => {
 };
 
 //optional
-const resetValidation = (formEl, inputList, config) => {
+/*const resetValidation = (formEl, inputList, config) => {
   inputList.forEach((input) => {
     hideInputError(formEl, input, config);
   });
+};*/
+const resetValidation = (formEl, config) => {
+  const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
+  const buttonElement = formEl.querySelector(config.submitButtonSelector);
+
+  inputList.forEach((input) => {
+    hideInputError(formEl, input, config);
+  });
+
+  toggleButtonState(inputList, buttonElement, config);
 };
 
 //TODO - USE THE SETTINGS OBJECT IN ALL FUNCTIONS INSTEAD OF HARDCODED STRINGS

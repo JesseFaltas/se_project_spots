@@ -61,6 +61,9 @@
   background-color: #212121;
   padding: 4px 8px;
   border-radius: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .modal__close-btn {
@@ -150,8 +153,8 @@
 
 .modal__submit-btn_disabled {
   opacity: 50%;
-  /*position: absolute;*/
-  bottom: 20px;
+  position: absolute;
+  bottom: 15px;
 }
 
 .modal__name-input {

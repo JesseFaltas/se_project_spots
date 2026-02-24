@@ -106,6 +106,7 @@ const newPostCaptionInput = newPostModal.querySelector("#card-caption-input");
 const cardSubmitBtn = newPostModal.querySelector(".modal__submit-btn");
 
 newPostButton.addEventListener("click", function () {
+  resetValidation(newPostForm, settings);
   openModal(newPostModal);
 });
 
@@ -120,6 +121,7 @@ function handleNewPostFormSubmit(evt) {
   cardList.prepend(cardElement);
   evt.target.reset();
   disableButton(cardSubmitBtn, settings);
+
   closeModal(newPostModal);
 }
 

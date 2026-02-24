@@ -66,13 +66,10 @@ const resetValidation = (formEl, config) => {
   toggleButtonState(inputList, buttonElement, config);
 };
 
-//TODO - USE THE SETTINGS OBJECT IN ALL FUNCTIONS INSTEAD OF HARDCODED STRINGS
-
 const setEventListeners = (formEl, config) => {
   const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
   const buttonElement = formEl.querySelector(config.submitButtonSelector);
 
-  //TODO- handle initial states
   toggleButtonState(inputList, buttonElement, config);
 
   inputList.forEach((inputElement) => {

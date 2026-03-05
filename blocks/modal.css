@@ -26,8 +26,6 @@
 .modal__container {
   box-sizing: border-box;
   max-width: 730px;
-  height: 408px;
-  /*height: 100%;*/
   width: 100%;
   border-radius: 8px;
   background-color: #fff;
@@ -128,8 +126,7 @@
 .modal__input_type_error {
   color: red;
   border-color: red;
-  position: relative;
-  bottom: 8px;
+  bottom: 15px;
 }
 
 .modal__submit-btn {

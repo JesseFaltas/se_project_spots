@@ -150,7 +150,6 @@
 
 .modal__submit-btn_disabled {
   opacity: 50%;
-  position: absolute;
   bottom: 15px;
 }
 
